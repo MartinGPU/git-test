@@ -26,6 +26,6 @@ public class GitTest {
         $(".input-input-Zpzc1").setValue("Motorolla");
         sleep(2000);
         $(".desktop-9uhrzn").click();
-        sleep(4000);
+        sleep(2000);
     }
 }
