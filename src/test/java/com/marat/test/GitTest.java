@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
@@ -18,7 +19,9 @@ public class GitTest {
     @Test
     public void testForGit() {
         Selenide.open("https://www.avito.ru/");
-        $(".top-rubricator-rubricatorButton-SoKyQ").click();
-        sleep(4000);
+        $(".tooltip-target-wrapper-mu94t").click();
+        sleep(2000);
+        $("[alt = 'Электроника']").hover();
+        $(byText("Рации")).click();
     }
 }
