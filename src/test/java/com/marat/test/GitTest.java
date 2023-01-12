@@ -19,9 +19,12 @@ public class GitTest {
     @Test
     public void testForGit() {
         Selenide.open("https://www.avito.ru/");
+        sleep(4000);
         $(".tooltip-target-wrapper-mu94t").click();
-        sleep(2000);
-        $("[alt = 'Электроника']").hover();
+        $("[data-marker = 'top-rubricator/root-category-26195']").hover();
         $(byText("Рации")).click();
+        $(".input-input-Zpzc1").setValue("Motorolla");
+        sleep(2000);
+
     }
 }
